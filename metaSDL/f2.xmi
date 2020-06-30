@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="ASCII"?>
+<metaSDL:MetaSysSDL xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:metaSDL="http://www.example.org/metaSDL" nameSys="sys">
+  <block id="1">
+    <processus id="1p">
+      <state id="initervice1p">
+        <connection input="in" output="out"/>
+        <signal id="s2" from="2" to="1" with="env"/>
+      </state>
+      <state id="NewService1"/>
+    </processus>
+    <processus id="2p">
+      <state id="NewService2"/>
+    </processus>
+  </block>
+  <block id="2">
+    <processus id="3p">
+      <state id="NewService3">
+        <signal id="s3" from="1sp" to="1" with="env"/>
+      </state>
+    </processus>
+    <processus id="4p">
+      <state id="abortServiceInit"/>
+      <state id="NewServiceExit"/>
+    </processus>
+  </block>
+  <processus id="1sp">
+    <state id="initervice1">
+      <signal id="s1" from="1sp" to="2" with="lenv"/>
+    </state>
+    <state id="NewService1"/>
+  </processus>
+</metaSDL:MetaSysSDL>

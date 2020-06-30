@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<banque>
+  <compte idCompte="1">
+    <numCompte idcheck="1">
+      <nume>cmt+0</nume>
+    </numCompte>
+    <solde>2000</solde>
+  </compte>
+  <compte idCompte="2">
+    <numCompte idcheck="1">
+      <nume>cmt+1</nume>
+    </numCompte>
+    <solde>2020</solde>
+  </compte>
+  <compte idCompte="3">
+    <numCompte idcheck="1">
+      <nume>cmt+2</nume>
+    </numCompte>
+    <solde>2040</solde>
+  </compte>
+</banque>

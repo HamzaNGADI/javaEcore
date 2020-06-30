@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE system SYSTEM "sys.dtd">
+
+<system name="d">
+
+	<block id="1">
+		 <process id="1" >
+		    <state id="initervice1"></state>
+		   	<state id="NewService1"></state>
+		 </process>
+		 <process id="2" >
+		   	<state id="NewService2"></state>
+		 </process>
+	</block>
+
+	<block id="2">
+		 <process id="3" >
+		   	<state id="NewService3"></state>
+		 </process>
+		 <process id="4" >
+		   	<state id="abortServiceInit"></state>	 	
+		   	<state id="NewServiceExit"></state>
+		 </process>
+	</block>
+
+</system>

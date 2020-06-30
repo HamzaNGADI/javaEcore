@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metaSDL:MetaSysSDL
+  xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:metaSDL="http://www.example.org/metaSDL"
+    xsi:schemaLocation="http://www.example.org/metaSDL metaSDL.ecore"
+ nameSys="sys">
+
+ 	<metaSDL:processus id="1sp">
+		    <metaSDL:state id="initervice1">
+		    	<metaSDL:signal id="s1" from="1sp" to="2" with="lenv" ></metaSDL:signal>
+		    </metaSDL:state>
+		   	<metaSDL:state id="NewService1"></metaSDL:state>
+	</metaSDL:processus>
+	
+	<metaSDL:block id="1">
+		 <metaSDL:processus id="1p">
+		    <metaSDL:state id="initervice1p">
+		    	<metaSDL:connection input="in" output="out"></metaSDL:connection>
+		    	<metaSDL:signal id="s2" from="2" to="1" with="env" ></metaSDL:signal>
+		    </metaSDL:state>
+		   	<metaSDL:state id="NewService1"></metaSDL:state>
+		 </metaSDL:processus>
+		 <metaSDL:processus id="2p">
+		   	<metaSDL:state id="NewService2"></metaSDL:state>
+		 </metaSDL:processus>
+	</metaSDL:block>
+
+	<block id="2">
+		 <processus id="3p">
+		   	<state id="NewService3">
+		   	<metaSDL:signal id="s3" from="1sp" to="1" with="env" ></metaSDL:signal>
+		   	</state>
+		 </processus>
+		 <processus id="4p">
+		   	<state id="abortServiceInit"></state>	 	
+		   	<state id="NewServiceExit"></state>
+		 </processus>
+	</block>
+
+</metaSDL:MetaSysSDL>

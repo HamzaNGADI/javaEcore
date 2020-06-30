@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated metaSDL -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="metaSDL.presentation.MetaSDLModelWizardID"
+            name="%_UI_MetaSDLModelWizard_label"
+            class="metaSDL.presentation.MetaSDLModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/MetaSDLModelFile.gif">
+         <description>%_UI_MetaSDLModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated metaSDL -->
+      <editor
+            id="metaSDL.presentation.MetaSDLEditorID"
+            name="%_UI_MetaSDLEditor_label"
+            icon="icons/full/obj16/MetaSDLModelFile.gif"
+            extensions="metasdl"
+            class="metaSDL.presentation.MetaSDLEditor"
+            contributorClass="metaSDL.presentation.MetaSDLActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>

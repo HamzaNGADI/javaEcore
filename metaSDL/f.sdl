@@ -1,0 +1,50 @@
+system sys
+1 referenced;
+2 referenced;
+1sp referenced;
+block 1
+1p referenced;
+2p referenced;
+process 1p
+start;
+nextstate initervice1pstate initervice1p
+input in
+output out
+channel s2 nodelay from 2 to 1 with env
+endstate initervice1p
+nextstate NewService1state NewService1
+endstate NewService1
+endprocess 1p
+process 2p
+start;
+nextstate NewService2state NewService2
+endstate NewService2
+endprocess 2p
+endBlock 1
+block 2
+3p referenced;
+4p referenced;
+process 3p
+start;
+nextstate NewService3state NewService3
+channel s3 nodelay from 1sp to 1 with env
+endstate NewService3
+endprocess 3p
+process 4p
+start;
+nextstate abortServiceInitstate abortServiceInit
+endstate abortServiceInit
+nextstate NewServiceExitstate NewServiceExit
+endstate NewServiceExit
+endprocess 4p
+endBlock 2
+process 1sp
+start;
+nextstate initervice1state initervice1
+channel s1 nodelay from 1sp to 2 with lenv
+endstate initervice1
+nextstate NewService1state NewService1
+endstate NewService1
+endprocess 1sp
+endsystem sys
+

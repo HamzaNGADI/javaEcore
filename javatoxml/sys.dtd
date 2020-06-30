@@ -1,0 +1,10 @@
+<!ELEMENT system (block*)>
+<!ELEMENT block (process+)>
+<!ELEMENT process (state+)>
+
+<!ATTLIST system name CDATA #REQUIRED>
+<!ATTLIST block id CDATA #IMPLIED>
+<!ATTLIST process id CDATA #IMPLIED>
+<!ATTLIST state id CDATA #IMPLIED>
+
+<!ELEMENT state (#PCDATA)>

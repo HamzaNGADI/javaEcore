@@ -1,0 +1,10 @@
+<!ELEMENT banque (compte*)>
+<!ELEMENT compte (numCompte, solde)>
+<!ELEMENT numCompte (nume,naC)>
+<!ELEMENT nume (cm)>
+<!ATTLIST compte idCompte CDATA #REQUIRED>
+<!ATTLIST numCompte idcheck CDATA #IMPLIED>
+
+<!ELEMENT cm (#PCDATA)>
+<!ELEMENT naC (#PCDATA)>
+<!ELEMENT solde (#PCDATA)>

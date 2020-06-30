@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel"
+    modelDirectory="/META/src-gen" creationIcons="false" editDirectory="/META.edit/src-gen"
+    editorDirectory="/META.editor/src-gen" modelPluginID="META" modelName="META" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    codeFormatting="true" importerID="org.eclipse.emf.importer.ecore" complianceLevel="8.0"
+    copyrightFields="false" operationReflection="true" importOrganizing="true">
+  <foreignModel>mETA.ecore</foreignModel>
+  <testsDirectory xsi:nil="true"/>
+  <genPackages prefix="META" disposableProviderFactory="true" ecorePackage="mETA.ecore#/">
+    <genClasses ecoreClass="mETA.ecore#//SystemSDL">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mETA.ecore#//SystemSDL/canalsystem"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mETA.ecore#//SystemSDL/block"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mETA.ecore#//SystemSDL/signal"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mETA.ecore#//SystemSDL/process"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mETA.ecore#//SystemSDL/name"/>
+    </genClasses>
+    <genClasses ecoreClass="mETA.ecore#//Block">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mETA.ecore#//Block/connect"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference mETA.ecore#//Block/process"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mETA.ecore#//Block/canalblock"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mETA.ecore#//Block/name"/>
+    </genClasses>
+    <genClasses ecoreClass="mETA.ecore#//Process">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mETA.ecore#//Process/state"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mETA.ecore#//Process/name"/>
+    </genClasses>
+    <genClasses ecoreClass="mETA.ecore#//CanalSystem">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference mETA.ecore#//CanalSystem/signal"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference mETA.ecore#//CanalSystem/block"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference mETA.ecore#//CanalSystem/canalsystem"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mETA.ecore#//CanalSystem/name"/>
+    </genClasses>
+    <genClasses ecoreClass="mETA.ecore#//CanalBlock">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference mETA.ecore#//CanalBlock/process"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference mETA.ecore#//CanalBlock/canalblock"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference mETA.ecore#//CanalBlock/signal"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mETA.ecore#//CanalBlock/name"/>
+    </genClasses>
+    <genClasses ecoreClass="mETA.ecore#//Connect">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference mETA.ecore#//Connect/canalsystem"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference mETA.ecore#//Connect/canalblock"/>
+    </genClasses>
+    <genClasses ecoreClass="mETA.ecore#//State">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference mETA.ecore#//State/state"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mETA.ecore#//State/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference mETA.ecore#//State/signal"/>
+    </genClasses>
+    <genClasses ecoreClass="mETA.ecore#//%"/>
+    <genClasses ecoreClass="mETA.ecore#//Signal">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mETA.ecore#//Signal/name"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>
